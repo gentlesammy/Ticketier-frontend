@@ -7,12 +7,18 @@ import { Form } from "react-bootstrap";
 import {useState} from "react";
 
 
-const Login = () => {
+const Login = ({setFormLoad}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const LoginHandler = (e) => {
-        //TODO: handle form validation
         e.preventDefault();
+        //TODO: handle form validation
+        if(email==="" || password === ""){
+            return alert("all fields are required");
+        }
+        if(password.length <= 8){
+            return alert("password length must be greater than eight characters");
+        }
         console.log({email, password});
     }
 
@@ -24,7 +30,7 @@ const Login = () => {
                 <Col>
                     <h3>CLIENT LOGIN</h3>
                     <hr />
-                    <Form onSubmit={LoginHandler}>
+                    <Form onSubmit={LoginHandler} autoComplete="off">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="Email" 
@@ -55,7 +61,7 @@ const Login = () => {
 
             <Row>
                 <Col>
-                    <a href="#">Forget Password? Click Here</a>
+                    <a on href="#" onClick = {() => {setFormLoad("reset")}}>Forget Password? Click Here</a>
                 </Col>
             </Row>
         </Container>
