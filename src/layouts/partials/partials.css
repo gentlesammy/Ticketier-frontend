@@ -1,0 +1,14 @@
+.copyright{
+    background: rgb(3, 3, 36);
+    padding-top: 20px;
+    color: white;
+}
+
+.navbar_container{
+    background-color: rgb(3, 3, 36) !important;
+}
+
+.navbar-toggler-icon{
+    outline: none !important;
+    border: none;
+}

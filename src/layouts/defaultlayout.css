@@ -1,0 +1,11 @@
+.default_layout_container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+
+.main_content{
+    min-height: 88vh; 
+}

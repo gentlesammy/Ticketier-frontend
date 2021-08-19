@@ -5,19 +5,22 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Form } from "react-bootstrap";
 import {useState} from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = ({setFormLoad}) => {
+    const errorNot = (msg) => toast.error(msg);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const LoginHandler = (e) => {
         e.preventDefault();
         //TODO: handle form validation
         if(email==="" || password === ""){
-            return alert("all fields are required");
+            return errorNot("all fields are required");
         }
         if(password.length <= 8){
-            return alert("password length must be greater than eight characters");
+            return errorNot("password length must be greater than eight characters");
         }
         console.log({email, password});
     }
@@ -30,6 +33,14 @@ const Login = ({setFormLoad}) => {
                 <Col>
                     <h3>CLIENT LOGIN</h3>
                     <hr />
+                    <ToastContainer 
+                        position="top-center"
+                        autoClose={3000}
+                        draggable
+                        pauseOnHover
+
+                    
+                    />
                     <Form onSubmit={LoginHandler} autoComplete="off">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email</Form.Label>

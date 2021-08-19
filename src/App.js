@@ -5,11 +5,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Entry from './pages/entry/Entry';
+import DefaultLayouts from './layouts/DefaultLayouts';
+
 
 function App() {
   return (
     <div className="App">
-        <Entry/>
+        {/* <Entry/> */}
+        <DefaultLayouts>
+            Hello World
+        </DefaultLayouts>
     </div>
   );
 }
