@@ -1,0 +1,27 @@
+
+.dashboard_hero{
+    margin-left: auto;
+    background: #f2f2f2;
+    padding: 20px 0px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+.ticket_info_box{
+    margin-top:20px;
+}
+
+.tbox{
+    display:flex;
+    justify-content: center;
+
+}
+.tbox .desc{
+    margin-right: 20px;
+}
+
+.recent_ticket_title{
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    text-align: center;
+}
