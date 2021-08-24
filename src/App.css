@@ -8,3 +8,7 @@ h1, h2, h3{
   color: #0000f0
 }
 
+.breadcrumb{
+  margin-left: auto;
+  margin-right: auto;
+}

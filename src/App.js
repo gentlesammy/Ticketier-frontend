@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Entry from './pages/entry/Entry';
 import DefaultLayouts from './layouts/DefaultLayouts';
 import Dashboard from './pages/dashboard/Dashboard';
+import CreateTicket from './pages/createTicket/CreateTicket';
+import TicketList from './pages/TicketList/TicketList';
 
 
 function App() {
@@ -14,7 +16,9 @@ function App() {
     <div className="App">
         {/* <Entry/> */}
         <DefaultLayouts>
-            <Dashboard/>
+            {/* <Dashboard/> */}
+            {/* <CreateTicket/> */}
+            <TicketList/>
         </DefaultLayouts>
     </div>
   );

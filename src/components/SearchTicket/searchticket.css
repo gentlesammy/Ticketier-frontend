@@ -1,0 +1,15 @@
+.searchTicket_container .row{
+    background: #f3f3f3;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.searchTicket_container input{
+    border: none;
+    outline: none !important;
+    
+}
+.searchTicket_container input:focus{
+    border: 0px !important;
+    outline: none !important;
+}
