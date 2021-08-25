@@ -1,0 +1,22 @@
+.message_container{
+    background: #f3f3f3;
+    padding: 20px;
+    font-weight: 400;
+}
+.message{
+    padding: 10px;
+      
+}
+.operator .message{
+    background: white;
+    font-weight: 400; 
+}
+
+.message_container .sender{
+    font-style: 1.3rem;
+}
+
+.client .message{
+    background: #f0d7d7;
+    font-weight: 600; 
+}

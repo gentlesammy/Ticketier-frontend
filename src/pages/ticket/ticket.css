@@ -1,0 +1,11 @@
+.ticket_container{
+    min-height: 100vh;
+    background:yellowgreen;
+}
+
+.ticket_main_info p{
+    font-weight: bold;
+}
+.ticket_main_info p span{
+    font-weight: 400;
+}

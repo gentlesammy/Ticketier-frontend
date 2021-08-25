@@ -9,6 +9,7 @@ import DefaultLayouts from './layouts/DefaultLayouts';
 import Dashboard from './pages/dashboard/Dashboard';
 import CreateTicket from './pages/createTicket/CreateTicket';
 import TicketList from './pages/TicketList/TicketList';
+import Ticket from './pages/ticket/Ticket';
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
         <DefaultLayouts>
             {/* <Dashboard/> */}
             {/* <CreateTicket/> */}
-            <TicketList/>
+            {/* <TicketList/> */}
+            <Ticket/>
         </DefaultLayouts>
     </div>
   );

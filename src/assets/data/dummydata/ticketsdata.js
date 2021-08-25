@@ -4,7 +4,33 @@ export const TicketsList = [
         "User": "Mark Juju",
         "Subject" : "Money not refunded after goods are returned",
         "Status" : "pending",
-        "date": "17/09/2021"
+        "date": "17/09/2021",
+        history: [
+            {
+                "id" : 1,
+                "date" : "20-10-10",
+                "message": "Thanks for your message, we are looking into it",
+                "messageBy" : "operator"
+            },
+            {
+                "id" : 2,
+                "date" : "20-10-10",
+                "message": "I will wait patiently, dont be late please",
+                "messageBy" : "client"
+            },
+            {
+                "id" : 3,
+                "date" : "20-10-11",
+                "message": "It is 24hours, i am yet to hear from you. Please feed me back",
+                "messageBy" : "client"
+            },
+            {
+                "id" : 4,
+                "date" : "20-10-11",
+                "message": "Thanks for your patient, I am in touch with the marketting team, refund possible today Thanks for your patient, I am in touch with the marketting team, refund possible todayThanks for your patient, I am in touch with the marketting team, refund possible todayThanks for your patient, I am in touch with the marketting team, refund possible todayThanks for your patient, I am in touch with the marketting team, refund possible todayThanks for your patient, I am in touch with the marketting team, refund possible todayThanks for your patient, I am in touch with the marketting team, refund possible today",
+                "messageBy" : "operator"
+            },
+        ]
     },
 
     {
