@@ -1,7 +1,13 @@
 import "./partials.css";
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
+import {Link, useHistory} from "react-router-dom";
+import {LinkContainer} from "react-router-bootstrap";
 
 const Header = () => {
+    const history = useHistory();
+    const logOutUser = () => {
+        history.push("/"); 
+    } 
     return (
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky="top" className="navbar_container">
             <Container>
@@ -9,21 +15,34 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="#about">About</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    <Nav.Link href="#contact">Contact</Nav.Link>
-                    
-                    
+                    <LinkContainer to="/about">
+                        <Nav.Link>About</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/features">
+                        <Nav.Link>Features</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/pricing">
+                        <Nav.Link>Pricing</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/contact">
+                        <Nav.Link>Contact</Nav.Link>
+                    </LinkContainer>
                 </Nav>
+
                 <Nav>
-                    <Nav.Link href="#deets">LogOut</Nav.Link>
                     <NavDropdown title="User" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Dashboard</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Tickets</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Credits</NavDropdown.Item>
+                        <LinkContainer to="/dashboard">
+                            <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                        </LinkContainer>
+
+                        <LinkContainer to="/tickets">
+                            <NavDropdown.Item>Tickets</NavDropdown.Item>
+                        </LinkContainer>
+                        <LinkContainer to="/tickets/create">
+                            <NavDropdown.Item>Add Ticket</NavDropdown.Item>
+                        </LinkContainer>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        <NavDropdown.Item  onClick={logOutUser}>Logout</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>

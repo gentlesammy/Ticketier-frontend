@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { Breadcrumb } from "react-bootstrap";
 import AddTicket from "../../components/ticketform/AddTicket";
 import { Card } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 const CreateTicket = () => {
     return (
@@ -14,7 +15,7 @@ const CreateTicket = () => {
                 <Col>
                     <h1>ADD NEW TICKET</h1>
                      <Breadcrumb className="text-center breadcrumb">
-                        <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
+                        <Breadcrumb.Item><Link to="/dashboard">Dashboard</Link></Breadcrumb.Item>
                         <Breadcrumb.Item active>Create Ticket</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>

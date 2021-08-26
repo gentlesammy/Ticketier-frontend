@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Container, Row, Col, Breadcrumb, Button } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
 import { TicketsList } from "../../assets/data/dummydata/ticketsdata";
 import MessageHistory from "../../components/messageHistory/MessageHistory";
 import Reply from "../../components/replyTicket/Reply";
 import "./ticket.css";
 
 const Ticket = () => {
+    
+    const {id} = useParams();
+    
     const [reply, setReply] = useState("");
-    const ticket = TicketsList[0];
+    const ticket = TicketsList[id];
     const handlyReplySumit = ()=> {
         console.log(reply);
     }
@@ -17,7 +21,7 @@ const Ticket = () => {
                 <Col>
                     <h1>Ticket Detail</h1>
                      <Breadcrumb className="text-center breadcrumb">
-                        <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
+                        <Breadcrumb.Item><Link to="/dashboard">Dashboard</Link></Breadcrumb.Item>
                         <Breadcrumb.Item active>Ticket</Breadcrumb.Item>
                     </Breadcrumb>
                     

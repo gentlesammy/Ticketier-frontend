@@ -1,5 +1,6 @@
 import "./tickettable.css";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const TicketTable = ({TicketsList}) => {
     let idd = 1;
@@ -22,7 +23,7 @@ const TicketTable = ({TicketsList}) => {
                            return <tr key={tk.id}>
                                 <td>{idd++}</td>
                                 <td>{tk.User}</td>
-                                <td>{tk.Subject}</td>
+                                <td> <Link to={`/tickets/detail/${tk.id}`} className="no_text_decoration">{tk.Subject}</Link></td>
                                 <td>{tk.Status}</td>
                                 <td>{tk.date}</td>
                             </tr>

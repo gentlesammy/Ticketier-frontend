@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Col, Container, Row,Breadcrumb, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { TicketsList } from "../../assets/data/dummydata/ticketsdata";
 import SearchTicket from "../../components/SearchTicket/SearchTicket";
 import TicketTable from "../../components/tickettable/TicketTable";
@@ -35,7 +36,7 @@ const TicketList = () => {
                 <Col>
                     <h1>All Tickets</h1>
                      <Breadcrumb className="text-center breadcrumb">
-                        <Breadcrumb.Item href="/dashboard">Dashboard</Breadcrumb.Item>
+                        <Breadcrumb.Item><Link to="/dashboard">Dashboard</Link></Breadcrumb.Item>
                         <Breadcrumb.Item active>Tickets Listing</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
@@ -43,7 +44,7 @@ const TicketList = () => {
 
             <Row>
                 <Col>
-                    <Button variant="primary">Add New Ticket</Button>
+                    <Link to="/tickets/create"><Button variant="primary">Add New Ticket</Button></Link>
                 </Col>
                 <Col className="text-right">
                     <SearchTicket setStr={setStr}/>

@@ -6,7 +6,12 @@ import Button from 'react-bootstrap/Button';
 import TicketTable from "../../components/tickettable/TicketTable";
 import {TicketsList} from "../../assets/data/dummydata/ticketsdata";
 import { Breadcrumb } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 const Dashboard = () => {
+    const history = useHistory();
+    const addNewTicketHandler = () => {
+        history.push("/tickets/create");
+    }
    
     return (
         <Container>
@@ -17,7 +22,7 @@ const Dashboard = () => {
                         <Breadcrumb.Item href="">Home</Breadcrumb.Item>
                         <Breadcrumb.Item active>Dashboard</Breadcrumb.Item>
                     </Breadcrumb> */}
-                    <Button variant="primary" className="py-2 px-5">Add New Ticket</Button>
+                    <Button variant="primary" className="py-2 px-5" onClick={addNewTicketHandler}>Add New Ticket</Button>
                     <div className="ticket_info_box">
                         <div className="total_tickets tbox">
                             <h5 className="desc">Total Tickets Now :</h5>

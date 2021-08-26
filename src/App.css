@@ -12,3 +12,8 @@ h1, h2, h3{
   margin-left: auto;
   margin-right: auto;
 }
+
+.no_text_decoration{
+  text-decoration: none !important;
+  color: white;
+}
